@@ -1,2 +1,3 @@
 install: install-fpc.cmd
 build_script: build.cmd
+artifacts: appveyortest.exe
