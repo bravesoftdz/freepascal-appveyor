@@ -1,2 +1,2 @@
 install: install-fpc.cmd
-build: build.cmd
+build_script: build.cmd
