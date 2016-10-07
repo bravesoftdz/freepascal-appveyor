@@ -1,2 +1,2 @@
 set PATH=c:\FPC\3.0.0\bin\i386-Win32;%PATH%
-fpc appveyortest.pasfpc appveyortest.pas
+fpc appveyortest.pas
