@@ -1,0 +1,1 @@
+fpc appveyortest.pas
