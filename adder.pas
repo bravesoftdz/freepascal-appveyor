@@ -2,8 +2,8 @@ unit Adder;
 interface
 function Add(a,b:Integer):Integer;
 implementation
-procedure Add(a,b:Integer):Integer;
- Result:=a + b;
+function Add(a,b:Integer):Integer;
 begin
+ Add:=a + b;
 end;
 end.
