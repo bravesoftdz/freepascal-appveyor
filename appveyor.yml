@@ -3,3 +3,5 @@ build_script: build.cmd
 artifacts:
   - path: appveyortest.exe
     name: Exe
+cache:
+  - c:\FPC -> appveyor.yml
