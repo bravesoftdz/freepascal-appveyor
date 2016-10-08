@@ -3,6 +3,8 @@ build_script: build.cmd
 artifacts:
   - path: appveyortest.exe
     name: Exe
+  - path: kernel7.img
+    name: Ultibo
 cache:
   - c:\FPC -> appveyor.yml
   - c:\Ultibo -> appveyor.yml
