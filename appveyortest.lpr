@@ -1,7 +1,8 @@
-program appveyortest;
+program AppveyorTest;
+uses Adder;
 procedure Run;
 begin
- WriteLn ('Hi Mom!');
+ WriteLn('1 + 1 = ',Add(1,1));
 end;
 begin
  Run;
