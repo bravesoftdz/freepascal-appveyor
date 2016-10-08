@@ -12,7 +12,7 @@ begin
  Check(Add(1,1)=2,'b');
  Check(Add(1,1)=2,'c');
  Check(Add(1,1)=2,'d');
- Check(Add(1,1)=3,'e');
+ Check(Add(1,1)=2,'e');
 end;
 begin
  TestFramework.RegisterTest(TChecks.Suite);
