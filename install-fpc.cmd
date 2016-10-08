@@ -5,7 +5,7 @@ fpc-installer.exe /verysilent
 dir c:\FPC\3.0.0
 :installed_fpc
 
-if exist c:\Ulibo goto installed_ultibo
+if exist c:\Ultibo goto installed_ultibo
 curl -fsSL -o ultibo-installer.exe https://github.com/ultibohub/Core/releases/download/1.2.009/Ultibo-Core-1.2.009-Cucumber.exe
 ultibo-installer /verysilent
 dir c:\Ultibo
