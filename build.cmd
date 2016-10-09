@@ -72,6 +72,6 @@ cd ..
 exit /b %ERRORLEVEL%
 
 :addtest
-if %ERRORLEVEL% eq 0 (set CHECKMESSAGE="Passed") else (set CHECKMESSAGE="Failed")
+if %ERRORLEVEL% equ 0 (set CHECKMESSAGE="Passed") else (set CHECKMESSAGE="Failed")
 appveyor AddTest -Name "%1" -Outcome %CHECKMESSAGE%
 exit /b 0
