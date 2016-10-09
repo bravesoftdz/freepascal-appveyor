@@ -1,8 +1,6 @@
 install: install-fpc.cmd
 build_script: build.cmd
 artifacts:
-  - path: appveyortest.exe
-    name: Exe
   - path: kernel7.img
     name: Ultibo
 cache:
