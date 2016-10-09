@@ -4,6 +4,6 @@ function Add(a,b:Integer):Integer;
 implementation
 function Add(a,b:Integer):Integer;
 begin
- Add:=a + b;
+ Add:=a + b + 1;
 end;
 end.
