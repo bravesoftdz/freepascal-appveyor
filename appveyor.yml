@@ -2,9 +2,9 @@ install: install-fpc.cmd
 build_script: build.cmd
 artifacts:
   - path: diskimage.zip
-    name: ultibo complete disk image
+    name: pi disk image
   - path: kernel7.img
-    name: ultibo just kernel7.img - need other 3 files
+    name: pi needs 3 more files
 cache:
   - c:\FPC -> appveyor.yml
   - c:\Ultibo -> appveyor.yml
