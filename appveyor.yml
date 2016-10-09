@@ -6,3 +6,7 @@ artifacts:
 cache:
   - c:\FPC -> appveyor.yml
   - c:\Ultibo -> appveyor.yml
+skip_commits:
+  files:
+    - docs/**/*
+    - README.md
