@@ -1,7 +1,7 @@
 install: install-fpc.cmd
 build_script: build.cmd
 artifacts:
-  - path: kernel7.img
+  - path: src/kernel7.img
     name: Ultibo
 cache:
   - c:\FPC -> appveyor.yml
