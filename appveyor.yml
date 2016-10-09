@@ -2,7 +2,7 @@ install: install-fpc.cmd
 build_script: build.cmd
 artifacts:
   - path: diskimage.zip
-    name: pi disk image
+    name: pi full disk image
   - path: kernel7.img
     name: pi needs 3 more files
 cache:
