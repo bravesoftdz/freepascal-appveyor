@@ -3,7 +3,7 @@ build_script: build.cmd
 artifacts:
   - path: diskimage.zip
     name: pi full disk image
-  - path: kernel7.img
+  - path: kernel7.img.zip
     name: pi needs 3 more files
 cache:
   - c:\FPC -> appveyor.yml
