@@ -13,7 +13,7 @@ dir c:\Ultibo
 
 mkdir bootfiles
 cd bootfiles
-curl -fsSL https://github.com/raspberrypi/firmware/blob/master/boot/bootcode.bin
-curl -fsSL https://github.com/raspberrypi/firmware/blob/master/boot/fixup.dat
-curl -fsSL https://github.com/raspberrypi/firmware/blob/master/boot/start.elf
+curl -fsSL https://github.com/raspberrypi/firmware/raw/master/boot/bootcode.bin
+curl -fsSL https://github.com/raspberrypi/firmware/raw/master/boot/fixup.dat
+curl -fsSL https://github.com/raspberrypi/firmware/raw/master/boot/start.elf
 dir /s
