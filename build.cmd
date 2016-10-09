@@ -72,7 +72,7 @@ cd ..
 exit /b %ERRORLEVEL%
 
 :addtest
-if %ERRORLEVEL% equ 0 (set CHECKMESSAGE="Passed") else (set CHECKMESSAGE="Failed")
-appveyor AddTest -Name a -Framework b -FileName c -Outcome Failed
+if %ERRORLEVEL% equ 0 (set TESTOUTCOME="Passed") else (set TESTOUTCOME="Failed")
+appveyor AddTest -Name a -Framework FPTest -FileName c -Outcome %TESTOUTCOME%
 rem appveyor AddTest -Name %2% -Framework FPTest -FileName %2% -Outcome %CHECKMESSAGE%
 exit /b 0
