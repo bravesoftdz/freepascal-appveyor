@@ -9,6 +9,7 @@ c:\FPC\3.0.0\bin\i386-Win32\fpc ^
  -FuFPTest ^
  addercheck.lpr
 addercheck
+call addtest "fpc addcheck"
 
 appveyor AddMessage "fpc adderapp"
 del *.exe *.o *.ppu
@@ -44,6 +45,7 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -Fuc:\Ultibo\Core\fpc\3.1.1/source/packages/rtl-objpas/src/inc ^
  addercheck.lpr
 addercheck
+call addtest "ultibo addercheck"
 
 appveyor AddMessage "ultibo adderapp"
 del *.exe *.o *.ppu
@@ -66,3 +68,10 @@ cd output
 7z a ..\kernel7.img.zip kernel7.img
 7z a ..\diskimage.zip *.*
 cd ..
+
+exit /b %ERRORLEVEL%
+
+:addtest
+if %ERRORLEVEL% eq 0 (set CHECKMESSAGE="Passed") else (set CHECKMESSAGE="Failed")
+appveyor AddTest -Name "%1" -Outcome %CHECKMESSAGE%
+exit /b 0
