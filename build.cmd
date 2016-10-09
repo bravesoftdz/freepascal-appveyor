@@ -59,6 +59,6 @@ mkdir output
 copy src\kernel7.img output
 copy bootfiles\*.* output
 cd output
-zip *.*
+7z a diskimage.zip *.*
 dir
 cd ..
