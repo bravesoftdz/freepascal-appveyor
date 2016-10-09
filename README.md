@@ -5,6 +5,8 @@ Build pascal firmware to run on raspberry pi, using the [ultibo](http://ultibo.o
 
 Download disk images from the most recent build at [AppVeyor Artifacts](https://ci.appveyor.com/project/markfirmware/freepascal-appveyor/build/artifacts). Each image is a compressed zip file. Unzip this file to an empty FAT-formatted SD card. Safely eject and remove the card. Power-down the pi, insert the card, and power-on the pi. In a few seconds the application will be running.
 
+_Afterwards for different apps or for newer builds it may be faster for you to only download the kernel7.img file and add it to the SD card._
+
 ## Road Map
 
 ### Automation
