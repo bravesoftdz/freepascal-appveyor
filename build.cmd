@@ -9,7 +9,7 @@ c:\FPC\3.0.0\bin\i386-Win32\fpc ^
  -FuFPTest ^
  addercheck.lpr
 addercheck
-call addtest "fpc addcheck"
+call :addtest "fpc addcheck"
 
 appveyor AddMessage "fpc adderapp"
 del *.exe *.o *.ppu
@@ -45,7 +45,7 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -Fuc:\Ultibo\Core\fpc\3.1.1/source/packages/rtl-objpas/src/inc ^
  addercheck.lpr
 addercheck
-call addtest "ultibo addercheck"
+call :addtest "ultibo addercheck"
 
 appveyor AddMessage "ultibo adderapp"
 del *.exe *.o *.ppu
