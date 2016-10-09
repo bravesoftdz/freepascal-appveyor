@@ -73,5 +73,5 @@ exit /b %ERRORLEVEL%
 
 :addtest
 if %ERRORLEVEL% equ 0 (set CHECKMESSAGE="Passed") else (set CHECKMESSAGE="Failed")
-appveyor AddTest -Name "%1%-%2%" -Framework FPTest -FileName "%2%.exe" -Outcome %CHECKMESSAGE%
+appveyor AddTest -Name %2% -Framework FPTest -FileName %2% -Outcome %CHECKMESSAGE%
 exit /b 0
