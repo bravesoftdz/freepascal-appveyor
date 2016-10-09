@@ -11,4 +11,10 @@ ultibo-installer /verysilent
 dir c:\Ultibo
 :installed_ultibo
 
+mkdir bootfiles
+cd bootfiles
+curl -fsSL -o bootfiles.zip https://github.com/raspberrypi/firmware/archive/master.zip
+unzip bootfiles.zip
+dir /s
+
 

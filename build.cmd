@@ -52,3 +52,5 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG ^
  -O2 ^
  appveyortest.lpr
+
+cd ..
