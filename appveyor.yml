@@ -1,4 +1,4 @@
-install: install-fpc.cmd
+install: install-tools.cmd
 build_script: build.cmd
 artifacts:
   - path: diskimage.zip
@@ -8,6 +8,7 @@ artifacts:
 cache:
   - c:\FPC -> appveyor.yml
   - c:\Ultibo -> appveyor.yml
+  - bootfiles -> appveyor.yml
 skip_commits:
   files:
     - docs/**/*
