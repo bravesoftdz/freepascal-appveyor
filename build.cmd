@@ -55,6 +55,7 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
 
 cd ..
 
+copy src\kernel7.img .
 mkdir output
 copy src\kernel7.img output
 copy bootfiles\*.* output
