@@ -8,7 +8,7 @@ del *.exe *.o *.ppu
 c:\FPC\3.0.0\bin\i386-Win32\fpc ^
  -FuFPTest ^
  addercheck.lpr
-call :checkerrorlevl
+call :checkerrorlevel
 call :runtest addercheck fpc
 
 rem appveyor AddMessage "fpc adderapp"
