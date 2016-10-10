@@ -17,5 +17,8 @@ begin
 end;
 begin
  TestFramework.RegisterTest(TChecks.Suite);
- RunRegisteredTests;
+ if RunRegisteredTests.WasSuccessful then
+  exit (0)
+ else
+  exit (1);
 end.
