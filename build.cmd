@@ -3,8 +3,6 @@ set BUILDEXITCODE=0
 
 cd src
 
-rem c:\FPC\3.0.0\bin\i386-Win32\fpc adderapp.lpr
-
 appveyor AddMessage "fpc addercheck"
 del *.exe *.o *.ppu
 c:\FPC\3.0.0\bin\i386-Win32\fpc ^
@@ -12,17 +10,17 @@ c:\FPC\3.0.0\bin\i386-Win32\fpc ^
  addercheck.lpr
 call :runtest addercheck fpc
 
-appveyor AddMessage "fpc adderapp"
-del *.exe *.o *.ppu
-C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
- -B ^
- -Fuc:\Ultibo\Core\fpc\3.1.1\source\rtl\inc ^
- -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\win ^
- -Fuc:\Ultibo\Core\fpc\3.1.1\source\rtl\win32 ^
- -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\inc ^
- -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\win32 ^
- -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\i386 ^
- adderapp.lpr
+rem appveyor AddMessage "fpc adderapp"
+rem del *.exe *.o *.ppu
+rem C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
+rem  -B ^
+rem rem  -Fuc:\Ultibo\Core\fpc\3.1.1\source\rtl\inc ^
+rem  -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\win ^
+rem  -Fuc:\Ultibo\Core\fpc\3.1.1\source\rtl\win32 ^
+rem  -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\inc ^
+rem  -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\win32 ^
+rem  -Ic:\Ultibo\Core\fpc\3.1.1\source\rtl\i386 ^
+rem  adderapp.lpr
 
 appveyor AddMessage "ultibo addercheck"
 del *.exe *.o *.ppu
