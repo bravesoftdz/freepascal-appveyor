@@ -1,4 +1,6 @@
 
+set BUILDEXITCODE=0
+
 cd src
 
 rem c:\FPC\3.0.0\bin\i386-Win32\fpc adderapp.lpr
@@ -59,6 +61,8 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
 
 cd ..
 
+if %BUILDEXITCODE% neq 0 (goto :exitbuild)
+
 mkdir output
 copy src\kernel7.img output
 copy bootfiles\*.* output
@@ -67,10 +71,12 @@ cd output
 7z a ..\diskimage.zip *.*
 cd ..
 
-exit /b %ERRORLEVEL%
+:exitbuild
+exit %BUILDEXITCODE%
 
 :runtest
 %1
 if %ERRORLEVEL% equ 0 (set TESTOUTCOME=Passed) else (set TESTOUTCOME=Failed)
 appveyor AddTest -Name "%1" -Framework FPTest -FileName "%2" -Outcome %TESTOUTCOME%
+if %TESTOUTCOME% equ "Failed" (set BUILDEXITCODE=1)
 exit /b 0
