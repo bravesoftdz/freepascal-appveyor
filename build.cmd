@@ -72,7 +72,11 @@ cd ..
 exit /b %ERRORLEVEL%
 
 :addtest
-set TESTOUTCOME=None
-if %ERRORLEVEL% equ 0 (set TESTOUTCOME=Passed) else (set TESTOUTCOME=Failed)
+set TESTOUTCOME=Failed
+if %ERRORLEVEL% equ 0 (
+    set TESTOUTCOME=Passed
+) else (
+    set TESTOUTCOME=Failed
+)
 appveyor AddTest -Name a -Framework FPTest -FileName %1% -Outcome %TESTOUTCOME%
 exit /b 0
