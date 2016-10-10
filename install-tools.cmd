@@ -13,19 +13,21 @@ if exist c:\Ultibo goto installed_ultibo
 appveyor message "installing ultibo"
 curl -fsSL -o ultibo-installer.exe https://github.com/ultibohub/Core/releases/download/1.2.009/Ultibo-Core-1.2.009-Cucumber.exe
 ultibo-installer /verysilent
+goto :removed
 rd /s /q c:\Ultibo\Core\docs
 rd /s /q c:\Ultibo\Core\examples
 rd /s /q c:\Ultibo\Core\firmware
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\fcl-db
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\googleapi
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk1
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk2
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\oracle
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winceunits
-rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winunits-jedi
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\fcl-db
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\googleapi
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk1
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk2
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\oracle
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winceunits
+rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winunits-jedi
 rd /s /q c:\Ultibo\Core\languages
 rd /s /q c:\Ultibo\Core\lazarus.exe
 rd /s /q c:\Ultibo\Core\lazbuild.exe
+:removed
 dir c:\Ultibo
 curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
 dir *.zip
