@@ -1,7 +1,7 @@
 
 if exist bootfiles goto installed
 
-    appveyor message "installing bootfiles"
+    appveyor AddMessage "installing bootfiles"
     mkdir bootfiles
     cd bootfiles
     curl -fsSL -o bootcode.bin https://github.com/raspberrypi/firmware/raw/master/boot/bootcode.bin
