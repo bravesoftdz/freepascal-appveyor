@@ -60,10 +60,7 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  adderapp.lpr
 echo a
 echo b
-echo c
 call :checkerrorlevel
-
-cd ..
 
 if %BUILDEXITCODE% neq 0 (goto :exitbuild)
 
