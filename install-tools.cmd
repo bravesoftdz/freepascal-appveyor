@@ -12,10 +12,12 @@ ultibo-installer /verysilent
 dir c:\Ultibo
 curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
 dir *.zip
+dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 7z e -oc:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo ultibo-rtl-update.zip
-dir c:\Ultibo\Core
+dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 :installed_ultibo
+echo off
 
 if exist bootfiles goto installed_bootfiles
 mkdir bootfiles
