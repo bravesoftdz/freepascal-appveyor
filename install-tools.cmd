@@ -17,9 +17,9 @@ dir *.zip
 7z x -oultibo-rtl-update ultibo-rtl-update.zip
 dir ultibo-rtl-update\Core-master\source\rtl\ultibo
 dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
-rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
-rem copy
-rem dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+xcopy /s /i ultibo-rtl-update\Core-master\source\rtl\ultibo c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 :installed_ultibo
 
 exit 1
