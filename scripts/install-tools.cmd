@@ -1,4 +1,4 @@
 
-call install-fpc.cmd
-call install-ultibo.cmd
-call install-bootfiles.cmd
+call scripts/install-fpc.cmd
+call scripts/install-ultibo.cmd
+call scripts/install-bootfiles.cmd
