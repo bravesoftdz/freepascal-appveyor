@@ -93,6 +93,9 @@ appveyor AddTest -Name "%1" -Framework FPTest -FileName "%2" -Outcome %TESTOUTCO
 exit /b 0
 
 :checkerrorlevel
+echo d
+echo e
+echo f
 if %ERRORLEVEL% neq 0 (
     set BUILDEXITCODE=1
 )
