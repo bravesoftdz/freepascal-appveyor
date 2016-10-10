@@ -1,4 +1,4 @@
-program AppveyorTestCheck;
+program AdderCheck;
 {$mode objfpc}
 uses Adder,TestFramework,TextTestRunner;
 type

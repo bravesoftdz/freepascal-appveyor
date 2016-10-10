@@ -1,4 +1,4 @@
-program AppveyorTest;
+program AdderApp;
 uses Adder;
 procedure Run;
 begin
