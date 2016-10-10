@@ -8,8 +8,7 @@ del *.exe *.o *.ppu
 c:\FPC\3.0.0\bin\i386-Win32\fpc ^
  -FuFPTest ^
  addercheck.lpr
-addercheck
-call :addtest "fpc" "addcheck"
+call :runtest addercheck fpc
 
 appveyor AddMessage "fpc adderapp"
 del *.exe *.o *.ppu
@@ -44,8 +43,7 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -Fuc:\Ultibo\Core\fpc\3.1.1/source/packages/winunits-base/src ^
  -Fuc:\Ultibo\Core\fpc\3.1.1/source/packages/rtl-objpas/src/inc ^
  addercheck.lpr
-addercheck
-call :addtest "ultibo" "addercheck"
+call :runtest addercheck ultibo
 
 appveyor AddMessage "ultibo adderapp"
 del *.exe *.o *.ppu
@@ -71,7 +69,8 @@ cd ..
 
 exit /b %ERRORLEVEL%
 
-:addtest
+:runtest
+%1
 if %ERRORLEVEL% equ 0 (set TESTOUTCOME=Passed) else (set TESTOUTCOME=Failed)
-appveyor AddTest -Name "%2" -Framework FPTest -FileName "%1" -Outcome %TESTOUTCOME%
+appveyor AddTest -Name "%1" -Framework FPTest -FileName "%2" -Outcome %TESTOUTCOME%
 exit /b 0
