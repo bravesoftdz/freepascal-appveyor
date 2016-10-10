@@ -63,6 +63,7 @@ cd ..
 
 if %BUILDEXITCODE% neq 0 (goto :exitbuild)
 
+appveyor AddMessage "zip artifacts"
 mkdir output
 copy src\kernel7.img output
 copy bootfiles\*.* output
