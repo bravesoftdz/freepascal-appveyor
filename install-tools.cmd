@@ -16,7 +16,16 @@ ultibo-installer /verysilent
 rd /s /q c:\Ultibo\Core\docs
 rd /s /q c:\Ultibo\Core\examples
 rd /s /q c:\Ultibo\Core\firmware
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\fcl-db
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\googleapi
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk1
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\gtk2
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\oracle
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winceunits
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\packages\winunits-jedi
 rd /s /q c:\Ultibo\Core\languages
+rd /s /q c:\Ultibo\Core\lazarus.exe
+rd /s /q c:\Ultibo\Core\lazbuild.exe
 dir c:\Ultibo
 curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
 dir *.zip
