@@ -6,9 +6,15 @@ dir c:\FPC
 :installed_fpc
 
 if exist c:\Ultibo goto installed_ultibo
+echo on
 curl -fsSL -o ultibo-installer.exe https://github.com/ultibohub/Core/releases/download/1.2.009/Ultibo-Core-1.2.009-Cucumber.exe
 ultibo-installer /verysilent
 dir c:\Ultibo
+curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
+dir *.zip
+rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+7z e -oc:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo ultibo-rtl-update.zip
+dir c:\Ultibo\Core
 :installed_ultibo
 
 if exist bootfiles goto installed_bootfiles

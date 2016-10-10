@@ -6,9 +6,9 @@ artifacts:
   - path: kernel7.img.zip
     name: pi needs 3 more files
 cache:
-  - c:\FPC -> appveyor.yml
-  - c:\Ultibo -> appveyor.yml
-  - bootfiles -> appveyor.yml
+  - c:\FPC    -> appveyor.yml install-tools.cmd
+  - c:\Ultibo -> appveyor.yml install-tools.cmd
+  - bootfiles -> appveyor.yml install-tools.cmd
 skip_commits:
   files:
     - docs/**/*
