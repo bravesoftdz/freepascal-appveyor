@@ -15,8 +15,8 @@ dir c:\Ultibo
 curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
 dir *.zip
 7z x -oultibo-rtl-update ultibo-rtl-update.zip
-dir ultibo-rtl-update
-rem dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+dir ultibo-rtl-update\Core-master\source\rtl\ultibo
+dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 rem rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 rem copy
 rem dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
