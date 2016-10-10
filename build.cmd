@@ -76,6 +76,11 @@ exit %BUILDEXITCODE%
 
 :runtest
 %1
-if %ERRORLEVEL% equ 0 (set TESTOUTCOME=Passed) else (set TESTOUTCOME=Failed; set BUILDEXITCODE=1)
+if %ERRORLEVEL% equ 0 (
+    set TESTOUTCOME=Passed
+) else (
+    set TESTOUTCOME=Failed
+    set BUILDEXITCODE=1
+)
 appveyor AddTest -Name "%1" -Framework FPTest -FileName "%2" -Outcome %TESTOUTCOME%
 exit /b 0
