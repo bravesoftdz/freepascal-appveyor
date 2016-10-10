@@ -1,7 +1,4 @@
 
-echo on
-goto :installed_fpc
-
 if exist c:\FPC goto installed_fpc
 curl -fsSL -o fpc-installer.exe "http://downloads.sourceforge.net/project/freepascal/Win32/3.0.0/fpc-3.0.0.i386-win32.exe?r=&ts=1475862864&use_mirror=pilotfiber"
 fpc-installer.exe /verysilent
@@ -21,8 +18,6 @@ rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 xcopy /s /i ultibo-rtl-update\Core-master\source\rtl\ultibo c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 :installed_ultibo
-
-exit 1
 
 if exist bootfiles goto installed_bootfiles
 mkdir bootfiles
