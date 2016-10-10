@@ -1,11 +1,13 @@
 
 if exist c:\FPC goto installed_fpc
+appveyor message "installing fpc"
 curl -fsSL -o fpc-installer.exe "http://downloads.sourceforge.net/project/freepascal/Win32/3.0.0/fpc-3.0.0.i386-win32.exe?r=&ts=1475862864&use_mirror=pilotfiber"
 fpc-installer.exe /verysilent
 dir c:\FPC
 :installed_fpc
 
 if exist c:\Ultibo goto installed_ultibo
+appveyor message "installing ultibo"
 curl -fsSL -o ultibo-installer.exe https://github.com/ultibohub/Core/releases/download/1.2.009/Ultibo-Core-1.2.009-Cucumber.exe
 ultibo-installer /verysilent
 dir c:\Ultibo
@@ -20,6 +22,7 @@ dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
 :installed_ultibo
 
 if exist bootfiles goto installed_bootfiles
+appveyor message "installing bootfiles"
 mkdir bootfiles
 cd bootfiles
 curl -fsSL -o bootcode.bin https://github.com/raspberrypi/firmware/raw/master/boot/bootcode.bin
