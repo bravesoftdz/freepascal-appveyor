@@ -1,5 +1,5 @@
 
-if exist bootfiles goto installed
+if exist bootfiles goto :installed
 
     appveyor AddMessage "installing bootfiles"
     mkdir bootfiles
