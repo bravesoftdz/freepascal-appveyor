@@ -28,5 +28,9 @@ if exist c:\Ultibo goto installed
     rd /s /q c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
     xcopy /s /i ultibo-rtl-update\Core-master\source\rtl\ultibo c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
     dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
+    copy scripts\__buildrtl.bat c:\Ultibo\Core\fpc\3.1.1\source
+    cd c:\Ultibo\Core\fpc\3.1.1\source
+    __buildrtl.bat
+    cd c:\projects\freepascal-appveyor
 
 :installed
