@@ -20,6 +20,7 @@ if exist c:\Ultibo goto installed
     rd /s /q c:\Ultibo\Core\lazbuild.exe
     :removed
     dir c:\Ultibo
+    appveyor AddMessage "building ultibo rtl using __buildrtl.bat from 1.2.185"
     curl -fsSL -o ultibo-rtl-update.zip https://github.com/ultibohub/Core/archive/master.zip
     dir *.zip
     7z x -oultibo-rtl-update ultibo-rtl-update.zip
@@ -30,7 +31,7 @@ if exist c:\Ultibo goto installed
     dir c:\Ultibo\Core\fpc\3.1.1\source\rtl\ultibo
     copy scripts\__buildrtl.bat c:\Ultibo\Core\fpc\3.1.1\source
     cd c:\Ultibo\Core\fpc\3.1.1\source
-    __buildrtl.bat
+    call __buildrtl.bat
     cd c:\projects\freepascal-appveyor
 
 :installed
