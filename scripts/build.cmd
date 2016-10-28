@@ -52,6 +52,7 @@ del *.exe *.o *.ppu
 C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -B ^
  -Tultibo ^
+ -dBUILD_RPI ^
  -Parm ^
  -CpARMV6 ^
  -WpRPIB ^
@@ -65,6 +66,7 @@ del *.exe *.o *.ppu
 C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -B ^
  -Tultibo ^
+ -dBUILD_RPI2 ^
  -Parm ^
  -CpARMV7A ^
  -WpRPI2B ^
@@ -81,6 +83,7 @@ echo on
 copy kernel7.img output
 copy ..\bootfiles\*.* output
 cd output
+7z a  ..\..\kernel.img.zip  kernel.img
 7z a ..\..\kernel7.img.zip kernel7.img
 7z a ..\..\diskimage.zip *.*
 cd ..
