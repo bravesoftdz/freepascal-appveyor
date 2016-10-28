@@ -7,7 +7,13 @@ function SaveScreen(Console:PConsoleDevice;const Filename:String;X,Y,Width,Heigh
 
 implementation
 uses
- RaspberryPi3, {Include the RaspberryPi2 unit to give us network, filesystem etc}
+ {network, filesystem etc}
+ {$ifdef BUILD_RPI}
+  RaspberryPi,
+ {$endif}
+ {$ifdef BUILD_RPI2}
+  RaspberryPi2,
+ {$endif}
  GlobalConst,
  GlobalTypes,
  GraphicsConsole, {Include the GraphicsConsole unit so we can create a graphics window}
