@@ -47,15 +47,28 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
 call :checkerrorlevel
 call :runtest addercheck ultibo
 
-appveyor AddMessage "ultibo adderapp"
+appveyor AddMessage "ultibo adderapp - pi - kernel.img"
+del *.exe *.o *.ppu
+C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
+ -B ^
+ -Tultibo ^
+ -Parm ^
+ -CpARMV6 ^
+ -WpRPIB ^
+ @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI.CFG ^
+ -O2 ^
+ adderapp.lpr
+call :checkerrorlevel
+
+appveyor AddMessage "ultibo adderapp - pi2 - kernel7.img"
 del *.exe *.o *.ppu
 C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -B ^
  -Tultibo ^
  -Parm ^
  -CpARMV7A ^
- -WpRPI3B ^
- @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG ^
+ -WpRPI2B ^
+ @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI2.CFG ^
  -O2 ^
  adderapp.lpr
 call :checkerrorlevel
