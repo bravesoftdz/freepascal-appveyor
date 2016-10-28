@@ -47,15 +47,30 @@ C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
 call :checkerrorlevel
 call :runtest addercheck ultibo
 
-appveyor AddMessage "ultibo adderapp"
+appveyor AddMessage "ultibo adderapp - pi - kernel.img"
 del *.exe *.o *.ppu
 C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
  -B ^
  -Tultibo ^
+ -dBUILD_RPI ^
+ -Parm ^
+ -CpARMV6 ^
+ -WpRPIB ^
+ @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI.CFG ^
+ -O2 ^
+ adderapp.lpr
+call :checkerrorlevel
+
+appveyor AddMessage "ultibo adderapp - pi2 - kernel7.img"
+del *.exe *.o *.ppu
+C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\fpc ^
+ -B ^
+ -Tultibo ^
+ -dBUILD_RPI2 ^
  -Parm ^
  -CpARMV7A ^
- -WpRPI3B ^
- @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI3.CFG ^
+ -WpRPI2B ^
+ @C:\Ultibo\Core\fpc\3.1.1\bin\i386-win32\RPI2.CFG ^
  -O2 ^
  adderapp.lpr
 call :checkerrorlevel
@@ -65,9 +80,11 @@ if %BUILDEXITCODE% neq 0 (goto :exitbuild)
 appveyor AddMessage "zip artifacts"
 mkdir output
 echo on
+copy  kernel.img output
 copy kernel7.img output
 copy ..\bootfiles\*.* output
 cd output
+7z a  ..\..\kernel.img.zip  kernel.img
 7z a ..\..\kernel7.img.zip kernel7.img
 7z a ..\..\diskimage.zip *.*
 cd ..
