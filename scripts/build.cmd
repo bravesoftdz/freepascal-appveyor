@@ -80,13 +80,13 @@ if %BUILDEXITCODE% neq 0 (goto :exitbuild)
 appveyor AddMessage "zip artifacts"
 mkdir output
 echo on
-copy  kernel.img output
-copy kernel7.img output
-copy ..\bootfiles\*.* output
+xcopy /q  kernel.img output
+xcopy /q kernel7.img output
+xcopy /q ..\bootfiles\*.* output
 cd output
-7z a  ..\..\kernel.img.zip  kernel.img
-7z a ..\..\kernel7.img.zip kernel7.img
-7z a ..\..\diskimage.zip *.*
+7z a  ..\..\kernel.img.zip  kernel.img  > 7z.log
+7z a ..\..\kernel7.img.zip kernel7.img >> 7z.log
+7z a ..\..\diskimage.zip *.*           >> 7z.log
 cd ..
 
 :exitbuild
